@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createAcademy, deleteAcademy, getAcademy, getAllAcademy } from "../controllers/AcademyController";
+import { createAcademy, deleteAcademy, getAcademy, getAllAcademy } from "../controllers/AcademyController.js";
 
 const router = Router();
 

@@ -1,6 +1,6 @@
-import  {Schema, model, models} from "mongoose";
+import  mongoose from "mongoose";
 
-const AcademySchema = new Schema({
+const AcademySchema = new mongoose.Schema({
     email:{
         type:String,
         required:true,
@@ -24,6 +24,6 @@ const AcademySchema = new Schema({
     }
 },{timestamps:true});
 
-const Academy = models.Academy || model('Academy', AcademySchema);
+const Academy = mongoose.models.Academy || mongoose.model('Academy', AcademySchema);
 
 export default Academy;

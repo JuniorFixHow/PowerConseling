@@ -1,7 +1,6 @@
-import { Request, Response } from "express"
-import Academy from "../models/AcademyModel";
+import Academy from "../models/AcademyModel.js";
 
-export const createAcademy = async(req:Request, res:Response) =>{
+export const createAcademy = async(req, res) =>{
     try {
         const {email} = req.body;
         const aca = await Academy.findOne(email);
@@ -18,7 +17,7 @@ export const createAcademy = async(req:Request, res:Response) =>{
         console.log(error)
     }
 }
-export const getAllAcademy = async(req:Request, res:Response) =>{
+export const getAllAcademy = async(req, res) =>{
     try {
         const acas = await Academy.find({});
         res.status(200).json(acas);
@@ -28,7 +27,7 @@ export const getAllAcademy = async(req:Request, res:Response) =>{
     }
 }
 
-export const getAcademy = async(req:Request, res:Response)=>{
+export const getAcademy = async(req, res)=>{
     try {
         const {id} = req.params;
         const aca = await Academy.findById(id);
@@ -37,7 +36,7 @@ export const getAcademy = async(req:Request, res:Response)=>{
         console.log(error)
     }
 }
-export const deleteAcademy = async(req:Request, res:Response)=>{
+export const deleteAcademy = async(req, res)=>{
     try {
         const {id} = req.params;
         await Academy.findByIdAndDelete(id);

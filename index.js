@@ -1,17 +1,17 @@
-import express, { Application } from 'express';
+import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import { connecDB } from '../mongoose';
-import AcademyRoutes from './routes/AcademyRoutes';
+import AcademyRoutes from './routes/AcademyRoutes.js';
+import { connectDb } from './mongoose.js';
 
 dotenv.config();
 
-const app:Application = express();
+const app = express();
 app.use(cors())
 app.use(express.json());
 
-connecDB();
+connectDb();
 
 mongoose.connection.on('connected', ()=>{
     console.log('Mongo is back')
