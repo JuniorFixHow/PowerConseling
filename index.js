@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import AcademyRoutes from './routes/AcademyRoutes.js';
+import MessageRoutes from './routes/MessageRoutes.js';
 import { connectDb } from './mongoose.js';
 
 dotenv.config();
@@ -20,6 +21,7 @@ mongoose.connection.on('disconnected', ()=>{
     console.log('Mongo is disconnected')
 })
 
+app.use('/api/message', MessageRoutes);
 app.use('/api/academy', AcademyRoutes);
 
 

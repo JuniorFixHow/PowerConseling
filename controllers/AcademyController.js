@@ -9,7 +9,7 @@ export const createAcademy = async(req, res) =>{
         }
         else{
             const newAca = new Academy( req.body);
-            const savedAca = newAca.save();
+            const savedAca = await newAca.save();
             res.status(200).json(savedAca);
         }
         

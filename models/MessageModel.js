@@ -1,12 +1,11 @@
 import  mongoose from "mongoose";
 
-const AcademySchema = new mongoose.Schema({
+const MessageSchema = new mongoose.Schema({
     email:{
         type:String,
         required:true,
-        unique:true
     },
-    phone:{
+    subject:{
         type:String,
         required:true,
     },
@@ -14,8 +13,9 @@ const AcademySchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    location:{
-        type:{country:String, region:String, city:String}
+    body:{
+        type:String,
+        required:true
     },
     interest:{
         type:String,
@@ -23,6 +23,6 @@ const AcademySchema = new mongoose.Schema({
     }
 },{timestamps:true});
 
-const Academy = mongoose.models.Academy || mongoose.model('Academy', AcademySchema);
+const Message = mongoose.models.Message || mongoose.model('Message', MessageSchema);
 
-export default Academy;
+export default Message;
