@@ -1,0 +1,28 @@
+footer{
+    /* background-color: #FAFBFF; */
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+.footer-icon{
+    font-size: 2.5rem;
+    color: #282F4D;
+    position: absolute;
+    right: 2rem;
+    top: 0.7rem;
+    rotate: 270deg;
+}
+.footer-icon:hover{
+    font-size: 3rem;
+    color: #363636;
+    cursor: pointer;
+}
+
+/* footer span{
+    co
+} */

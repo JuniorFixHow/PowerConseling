@@ -1,0 +1,9 @@
+.app-main{
+  width: 100%;
+  background: url('/src/assets/imgs/bg.svg');
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
