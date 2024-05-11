@@ -11,16 +11,15 @@ const MessageSchema = new mongoose.Schema({
     },
     fullname:{
         type:String,
-        required:true
     },
     body:{
         type:String,
         required:true
     },
-    interest:{
-        type:String,
-        required:true
-    }
+    hasRead:{
+        type:Boolean,
+        default:false
+    },
 },{timestamps:true});
 
 const Message = mongoose.models.Message || mongoose.model('Message', MessageSchema);

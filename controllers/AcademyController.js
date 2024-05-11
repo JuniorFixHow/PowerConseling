@@ -3,7 +3,7 @@ import Academy from "../models/AcademyModel.js";
 export const createAcademy = async(req, res) =>{
     try {
         const {email} = req.body;
-        const aca = await Academy.findOne(email);
+        const aca = await Academy.findOne({email});
         if(aca){
             res.status(422).json('Email used already');
         }

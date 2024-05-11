@@ -18,7 +18,7 @@ transporter.verify((error, success)=>{
         console.log(error)
     }
     else{
-        console.log('Ready for order messages');
+        console.log('Ready for messages');
         console.log(success);
     }
 })
@@ -90,11 +90,32 @@ export const getAllMessage = async(req, res) =>{
         console.log(error)
     }
 }
+export const getAllAdminMessage = async(req, res) =>{
+    try {
+        const mess = await Message.find({ fullname: { $ne: process.env.EMAIL } });
+        res.status(200).json(mess);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 
 export const getMessage = async(req, res)=>{
     try {
         const {id} = req.params;
         const mes = await Message.findById(id);
+        res.status(200).json(mes);
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const updateMessage = async(req, res)=>{
+    try {
+        const {id} = req.params;
+        const mes = await Message.findByIdAndUpdate(id, 
+            {$set:req.body}, {new:true}
+        );
         res.status(200).json(mes);
     } catch (error) {
         console.log(error)
