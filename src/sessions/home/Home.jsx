@@ -16,10 +16,10 @@ const Home = () => {
             </div>
             <div className="home-right">
             <span className='welcome-text' >
-                Acumen Integrated Solutions is a certified partner in the Acumatica ERP ecosystem. Our company is built foremost on integrity and excellence ensuring the service you receive not only meet but exceed your expectations.
+                AcuPower Group is a certified partner in the Acumatica ERP ecosystem. Our company is built foremost on integrity and excellence ensuring the service you receive not only meet but exceed your expectations.
                 <br />
                 <br />
-                Acumen provides services to every vertical within Acumatica with our expertise in the Construction and Payroll suites. We do this using a streamlined model proven to increase the efficacy of each project we take on.
+                AcuPower provides services to every vertical within Acumatica with our expertise in the Construction and Payroll suites. We do this using a streamlined model proven to increase the efficacy of each project we take on.
             </span>
             </div>
         </div>

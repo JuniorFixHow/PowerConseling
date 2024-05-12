@@ -9,6 +9,21 @@ footer{
     position: relative;
 }
 
+.socials{
+    gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.social:hover{
+    color: #282F4D;
+}
+
 .footer-icon{
     font-size: 2.5rem;
     color: #282F4D;

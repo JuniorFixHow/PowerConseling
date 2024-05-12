@@ -135,15 +135,30 @@ const Academy = () => {
                 />
               </div>
               <div className="aca-input">
-                <span className="sub-text">Enter Interest</span>
-                <input
+                <span className="sub-text">Select Interest</span>
+                <select onChange={(e)=>setInterest(e.target.value)} defaultValue='' className='inp' name="interest" id="">
+                  <option value="">select</option>
+                  <option value="Business Analysis">Business Analysis</option>
+                  <option value="Construction">Construction</option>
+                  <option value="Customer Service Support">Customer Service Support</option>
+                  <option value="Development">Development</option>
+                  <option value="Distribution">Distribution</option>
+                  <option value="ERP Consultant Procurement">ERP Consultant Procurement</option>
+                  <option value="Inventroy">Inventroy</option>
+                  <option value="Manufacturing">Manufacturing</option>
+                  <option value="Quality Assurance">Quality Assurance</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Sales Consultant">Sales Consultant</option>
+                  <option value="Wholesale">Wholesale</option>
+                </select>
+                {/* <input
                   name="interest"
                   required
                   type="text"
                   className="inp"
                   placeholder="area of interest"
                   onChange={(e)=>setInterest(e.target.value)}
-                />
+                /> */}
               </div>
               {
                 message.alert &&

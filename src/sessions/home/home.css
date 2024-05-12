@@ -45,6 +45,12 @@ powerconsulting24@gmail.com
     transition: 1s;
     width: 12rem;
 }
+
+.home a{
+    text-decoration: none;
+    width: fit-content;
+}
+
 .home-left button:hover{
     background-color: #C2362F;
     width: 12.5rem;

@@ -30,7 +30,7 @@ const Contact = () => {
       try {
         const res = await axios.post(`${API}message/create`, data);
         if(res.status===200){ 
-          setMessage({alert:'Message sent', error:false});
+          setMessage({alert:"Message sent. We'll reply shortly.", error:false});
           formRef.current.reset();
         }else{
           setMessage({alert:'Error occured. Retry', error:true});
