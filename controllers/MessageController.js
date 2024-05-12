@@ -37,12 +37,91 @@ export const createAdminMessage = async(req, res) =>{
                 to:email,
                 subject: subject,
                 html: `
-                <div >
-                <p>
-                ${body}</br>
-                </p>
-                </div>    
-                `
+                <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AcuPower Group</title>
+    <style>
+        body{
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin:0;
+            padding:0;
+            width: 100%;
+        }
+
+        .main{
+            box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+            width: 50rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            border-radius: 0.2rem;
+        }
+
+        .main .container{
+            width: 100%;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main img{
+            width: 8rem;
+            height: 5rem;
+            object-fit: contain;
+        }
+        .main p{
+            text-align: justify;
+            font-size: 1.2rem;
+        }
+        .main .greet{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: start;
+        }
+        .main .best{
+            font-size: 1.2rem;
+        }
+
+        .main a{
+            text-decoration: none;
+            color: dodgerblue;
+            font-size: 1.2rem;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+
+        <div class="container">
+          <img
+            src="https://powerconsulting.netlify.app/assets/logo-Bn9bFxm1.png"
+            alt="AcuPower"
+          />
+          <p>
+            ${body}
+          </p>
+        </div>
+        <br />
+        <div class="greet">
+          <span class="best">Best regards, </span>
+          <a href="powerconsulting.netlify.app/" target="_blank">
+            <b>AcuPower Group</b>
+          </a>
+        </div>
+    </div>
+  </body>
+</html>
+  
+`
             }
             res.status(200).json(savedmes);
             transporter.sendMail(mailOptions, ()=>{
@@ -64,13 +143,59 @@ export const createMessage = async(req, res) =>{
                 to: process.env.EMAIL,
                 subject: subject,
                 html: `
-                <div >
-                <h3>Sender: ${fullname}</h3>
-                <p>
-                   ${body}</br>
-                </p>
-            </div>    
-        `
+                <!DOCTYPE html>
+                <html>
+                  <head>
+                    <title>User enquiries</title>
+                    <style>
+                        body{
+                            font-family: Arial, sans-serif;
+                            background-color: #f4f4f4;
+                            margin: 0;
+                            padding: 0;
+                            width:100%;
+                            display:flex;
+                            justify-content: center;
+                            align-items:center;
+                        }
+                        
+                        .main{
+                            width: 80%;
+                            padding: 16px;
+                            display: flex;
+                            flex-direction: column;
+                            border-radius: 2px;
+                            background-color: #ffffff;
+                            box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+                        }
+                
+                        .container{
+                            width: 100%;
+                            gap: 16px;
+                            align-items: center;
+                            justify-content: center;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                
+                         
+                         p{
+                            text-align: justify;
+                            font-size: 20px;
+                        }
+                        
+                    </style>
+                  </head>
+                  <body>
+                    <div class="main">
+                        <div class="container">
+                          <p>
+                            ${body}
+                          </p>
+                        </div>
+                    </div>
+                  </body>
+                </html> `
             }
             res.status(200).json(savedmes);
             transporter.sendMail(mailOptions, ()=>{
