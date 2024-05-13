@@ -51,20 +51,20 @@ const Academy = () => {
  }
 
   return (
-    <div id='academy' className="academy">
+    <div id="academy" className="academy">
       <span className="subtitle">Join Our Academy Today</span>
       <div className="aca-main">
         <span className="aca-text">
           Unlock your full potential and join our academy training group today!
           Gain valuable knowledge, sharpen your skills, and embark on a
-          transformative learning journey. Don&#39;t miss this opportunity to elevate
-          your expertise and achieve greatness. Sign up now!
+          transformative learning journey. Don&#39;t miss this opportunity to
+          elevate your expertise and achieve greatness. Sign up now!
         </span>
         <div className="aca-container">
           <img src={IMG} alt="" />
           <div className="aca-right">
             <span className="second-title">Sign up</span>
-            <form ref={formRef} >
+            <form ref={formRef}>
               <div className="aca-input">
                 <span className="sub-text">Enter full name</span>
                 <input
@@ -73,7 +73,7 @@ const Academy = () => {
                   className="inp"
                   type="text"
                   placeholder="full name"
-                  onChange={(e)=>setFullname(e.target.value)}
+                  onChange={(e) => setFullname(e.target.value)}
                 />
               </div>
               <div className="aca-input">
@@ -84,7 +84,7 @@ const Academy = () => {
                   className="inp"
                   type="email"
                   placeholder="email address"
-                  onChange={(e)=>setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="aca-input">
@@ -97,12 +97,12 @@ const Academy = () => {
                   placeholder="phone"
                 /> */}
                 <PhoneInput
-                  country={'us'}
+                  country={"us"}
                   value={phone}
-                  onChange={e => setPhone(e)}
+                  onChange={(e) => setPhone(e)}
                   // inputClass='inp'
-                  inputStyle={{width:'100%'}}
-                  containerStyle={{width:'100%'}}
+                  inputStyle={{ width: "100%" }}
+                  containerStyle={{ width: "100%" }}
                   // inputStyle={{paddingLeft:'3rem'}}
                 />
               </div>
@@ -131,19 +131,29 @@ const Academy = () => {
                   type="text"
                   className="inp"
                   placeholder="city"
-                  onChange={(e)=>setCity(e.target.value)}
+                  onChange={(e) => setCity(e.target.value)}
                 />
               </div>
               <div className="aca-input">
                 <span className="sub-text">Select Interest</span>
-                <select onChange={(e)=>setInterest(e.target.value)} defaultValue='' className='inp' name="interest" id="">
+                <select
+                  onChange={(e) => setInterest(e.target.value)}
+                  defaultValue=""
+                  className="inp"
+                  name="interest"
+                  id=""
+                >
                   <option value="">select</option>
                   <option value="Business Analysis">Business Analysis</option>
                   <option value="Construction">Construction</option>
-                  <option value="Customer Service Support">Customer Service Support</option>
+                  <option value="Customer Service Support">
+                    Customer Service Support
+                  </option>
                   <option value="Development">Development</option>
                   <option value="Distribution">Distribution</option>
-                  <option value="ERP Consultant Procurement">ERP Consultant Procurement</option>
+                  <option value="ERP Consultant Procurement">
+                    ERP Consultant Procurement
+                  </option>
                   <option value="Inventroy">Inventroy</option>
                   <option value="Manufacturing">Manufacturing</option>
                   <option value="Quality Assurance">Quality Assurance</option>
@@ -160,11 +170,18 @@ const Academy = () => {
                   onChange={(e)=>setInterest(e.target.value)}
                 /> */}
               </div>
-              {
-                message.alert &&
-                <Alert severity={message.error?'error':'success'} >{message.alert}</Alert>
-              }
-              <button onClick={createAcademy} className="aca-button">{isLoading?'Processing':'Submit'}</button>
+              {message.alert && (
+                <Alert severity={message.error ? "error" : "success"}>
+                  {message.alert}
+                </Alert>
+              )}
+              <button
+                disabled={isLoading}
+                onClick={createAcademy}
+                className={isLoading ? "dis-button" : "aca-button"}
+              >
+                {isLoading ? "Processing" : "Submit"}
+              </button>
             </form>
           </div>
         </div>
