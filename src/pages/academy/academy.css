@@ -1,0 +1,33 @@
+.academy{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.aca-container{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.table-container{
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.table-container input{
+    width: 18rem;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.5rem;
+    align-self: flex-end;
+    border-radius: 0.3rem;
+    border: 1px solid darkslategray;
+}

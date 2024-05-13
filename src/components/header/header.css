@@ -1,0 +1,29 @@
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    background-color: #fff;
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+}
+
+.header-container{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header img{
+    height: 4rem;
+    width: 6rem;
+    object-fit: contain;
+}
+
+.header-text{
+    font-size: 1.5rem;
+    color: #1C3666;
+    font-weight: 500;
+}

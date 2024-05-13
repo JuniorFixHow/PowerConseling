@@ -13,3 +13,75 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+
+
+.header-item{
+  color: #8f8e8e;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+.header-click{
+  color: #3B3B3B;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+.welcome-text{
+  color: #8f8e8e;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.sub-text{
+  color: #8f8e8e;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.header-item:hover{
+  color: #4b4a4a;
+  cursor: pointer;
+}
+
+.title{
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #1C3666;
+}
+
+.subtitle{
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1C3666;
+}
+.second-title{
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1C3666;
+}
+
+.text-content{
+  font-size: 0.9rem;
+  color: #8f8e8e;
+  font-weight: 400;
+  width: 50%;
+  align-self: center;
+  text-align: center;
+}
+
+.dis-button{
+  border: none;
+  padding: 0.8rem;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  background-color: grey;
+  cursor: default;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

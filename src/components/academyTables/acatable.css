@@ -1,0 +1,23 @@
+.acatable{
+    width: 100%;
+    align-self: center;
+}
+
+.acatable .actions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.acatable .delete{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: crimson;
+}
+.acatable .edit{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: midnightblue;
+}
