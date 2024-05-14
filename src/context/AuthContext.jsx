@@ -21,6 +21,9 @@ export const AuthProvider = ({children})=>{
         if(state.user){
             navigate('/')
         }
+        else{
+            navigate('login');
+        }
     }, [state.user, navigate])
 
     return(
