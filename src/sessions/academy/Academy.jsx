@@ -36,12 +36,16 @@ const Academy = () => {
         if(res.status===200){
           setMessage({alert:'You have successfully registered', error:false});
           formRef.current.reset();
-        }else{
-          setMessage({alert:'Error occured. Please retry'})
+        }
+        else if(res.status === 422){
+          setMessage({alert:res.data, error:true})
+        }
+        else{
+          setMessage({alert:'Error occured. Please retry', error:true})
         }
       } catch (error) {
         console.log(error);
-        setMessage({alert:'Error occured. Please retry'})
+        setMessage({alert:'Error occured. Please retry', error:true})
       }finally{
         setIsLoading(false);
       }
