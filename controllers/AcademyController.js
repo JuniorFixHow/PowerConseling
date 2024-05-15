@@ -1,7 +1,7 @@
 import Academy from "../models/AcademyModel.js";
 import dotenv from 'dotenv';
 import nodemailer from 'nodemailer';
-import { sendEmail } from "../utils/Email.js";
+import { sendDynamicEmail, sendEmail } from "../utils/Email.js";
 
 dotenv.config();
 
@@ -109,7 +109,8 @@ export const createAcademy = async(req, res) =>{
 </body>
 </html>   
         `
-        await sendEmail(msgbody, email, process.env.EMAIL, 'Welcome to AcuPower', 'PowerXcel IT Solutions')
+        // await sendEmail(msgbody, email, process.env.EMAIL, 'Welcome to AcuPower', 'PowerXcel IT Solutions')
+        await sendDynamicEmail(fullname, email)
             res.status(200).json(savedAca);
         }
         
