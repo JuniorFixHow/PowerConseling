@@ -1,6 +1,7 @@
 import Message from "../models/MessageModel.js";
 import dotenv from 'dotenv';
 import nodemailer from 'nodemailer';
+import { sendEmail } from "../utils/Email.js";
 
 dotenv.config();
 
@@ -32,11 +33,7 @@ export const createAdminMessage = async(req, res) =>{
             const newmes = new Message( req.body);
             const savedmes =await newmes.save();
             
-            mailOptions = {
-                from: process.env.EMAIL,
-                to:email,
-                subject: subject,
-                html: `
+            const msgbody = `
                 <!DOCTYPE html>
 <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
 
@@ -199,11 +196,9 @@ export const createAdminMessage = async(req, res) =>{
 
 </html>
                 `
-            }
+            
             res.status(200).json(savedmes);
-            transporter.sendMail(mailOptions, ()=>{
-                console.log('Message sent to client')
-            })
+            await sendEmail(msgbody, email, process.env.EMAIL, subject, 'AcuPower Group')
         
     } catch (error) {
         console.log(error)
@@ -214,71 +209,8 @@ export const createMessage = async(req, res) =>{
             const {email, body, subject, fullname} = req.body;
             const newmes = new Message( req.body);
             const savedmes =await newmes.save();
-            
-            mailOptions = {
-                from:email,
-                to: process.env.EMAIL,
-                subject: subject,
-                html: `
-                <!DOCTYPE html>
-                <html>
-                  <head>
-                    <title>User enquiries</title>
-                    <style>
-                        body{
-                            font-family: Arial, sans-serif;
-                            background-color: #f4f4f4;
-                            margin: 0;
-                            padding: 0;
-                            width:100%;
-                            display:flex;
-                            justify-content: center;
-                            align-items:center;
-                        }
-                        
-                        .main{
-                            width: 80%;
-                            padding: 16px;
-                            display: flex;
-                            flex-direction: column;
-                            border-radius: 2px;
-                            background-color: #ffffff;
-                            box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
-                        }
-                
-                        .container{
-                            width: 100%;
-                            gap: 16px;
-                            align-items: center;
-                            justify-content: center;
-                            display: flex;
-                            flex-direction: column;
-                        }
-                
-                         
-                         p{
-                            text-align: justify;
-                            font-size: 20px;
-                        }
-                        
-                    </style>
-                  </head>
-                  <body>
-                    <div class="main">
-                        <div class="container">
-                          <p>
-                            ${body}
-                          </p>
-                        </div>
-                    </div>
-                  </body>
-                </html> `
-            }
+			
             res.status(200).json(savedmes);
-            transporter.sendMail(mailOptions, ()=>{
-                console.log('Message received from frontend')
-            })
-        
     } catch (error) {
         console.log(error)
     }

@@ -1,8 +1,11 @@
 import Academy from "../models/AcademyModel.js";
 import dotenv from 'dotenv';
 import nodemailer from 'nodemailer';
+import { sendEmail } from "../utils/Email.js";
 
 dotenv.config();
+
+// YXMGU59N1QX761XQ1R8CQU36
 
 let transporter = nodemailer.createTransport({
     service:'gmail',
@@ -39,11 +42,8 @@ export const createAcademy = async(req, res) =>{
         else{
             const newAca = new Academy( req.body);
             const savedAca = await newAca.save();
-            mailOptions = {
-                from: process.env.EMAIL,
-                to:email,
-                subject: 'Welcome to AcuPower',
-                html: `
+          
+            const msgbody =  `
                 <!DOCTYPE html>
 <html>
 <head>
@@ -108,11 +108,8 @@ export const createAcademy = async(req, res) =>{
   </div>
 </body>
 </html>   
-                `
-            }
-            transporter.sendMail(mailOptions, ()=>{
-                console.log('Message sent to AcuPower')
-            })
+        `
+        await sendEmail(msgbody, email, process.env.EMAIL, subject, 'PowerXcel IT Solutions')
             res.status(200).json(savedAca);
         }
         
