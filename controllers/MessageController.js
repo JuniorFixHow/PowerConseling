@@ -1,7 +1,7 @@
 import Message from "../models/MessageModel.js";
 import dotenv from 'dotenv';
 import nodemailer from 'nodemailer';
-import { sendEmail } from "../utils/Email.js";
+import { replyDynamicEmail, sendEmail } from "../utils/Email.js";
 
 dotenv.config();
 
@@ -198,7 +198,8 @@ export const createAdminMessage = async(req, res) =>{
                 `
             
             res.status(200).json(savedmes);
-            await sendEmail(msgbody, email, process.env.EMAIL, subject, 'AcuPower Group')
+            // await sendEmail(msgbody, email, process.env.EMAIL, subject, 'AcuPower Group')
+			await replyDynamicEmail(subject, email, body)
         
     } catch (error) {
         console.log(error)

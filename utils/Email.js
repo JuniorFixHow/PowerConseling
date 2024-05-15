@@ -48,3 +48,27 @@ export const sendDynamicEmail = async (fullname, toEmail) =>{
         }
     }
 }
+export const replyDynamicEmail = async (subject, toEmail, body) =>{
+    const msg = {
+        to: toEmail,
+        from:{
+            name: 'AcuPower',
+            email:process.env.EMAIL
+        },
+        templateId: process.env.TEMP_KEY,
+        dynamicTemplateData:{
+            subject,
+            body
+        }
+    }
+
+    try {
+        await sgMail.send(msg);
+        console.log('Message sent')
+    } catch (error) {
+        console.error(error)
+        if(error.response){
+            console.log(error.response.body);
+        }
+    }
+}
