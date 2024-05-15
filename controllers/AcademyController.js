@@ -109,7 +109,7 @@ export const createAcademy = async(req, res) =>{
 </body>
 </html>   
         `
-        await sendEmail(msgbody, email, process.env.EMAIL, subject, 'PowerXcel IT Solutions')
+        await sendEmail(msgbody, email, process.env.EMAIL, 'Welcome to AcuPower', 'PowerXcel IT Solutions')
             res.status(200).json(savedAca);
         }
         
