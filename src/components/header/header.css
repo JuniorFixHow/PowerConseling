@@ -18,8 +18,9 @@ header{
 
 header img{
     height: 4rem;
-    width: 6rem;
+    width: 10rem;
     object-fit: contain;
+    /* background-color: #1C3666; */
 }
 
 .header-text{
