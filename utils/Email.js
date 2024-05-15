@@ -55,7 +55,7 @@ export const replyDynamicEmail = async (subject, toEmail, body) =>{
             name: 'AcuPower',
             email:process.env.EMAIL
         },
-        templateId: process.env.TEMP_KEY,
+        templateId: process.env.REPLY_KEY,
         dynamicTemplateData:{
             subject,
             body
