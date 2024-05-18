@@ -26,6 +26,10 @@ const Header = () => {
       text:'Academy'
     },
     {
+      link:'#aboutus',
+      text:'About Us'
+    },
+    {
       link:'#contact',
       text:'Contact'
     },

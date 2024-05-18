@@ -2,6 +2,7 @@
 import './App.css'
 import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
+import About from './sessions/about/About'
 import Academy from './sessions/academy/Academy'
 import Contact from './sessions/contact/Contact'
 import Difference from './sessions/difference/Difference'
@@ -21,6 +22,7 @@ function App() {
       <NextStep />
       <Difference />
       <Academy />
+      <About />
       <Contact />
       <Footer />
     </div>
