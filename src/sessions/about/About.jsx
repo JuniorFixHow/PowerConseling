@@ -19,7 +19,7 @@ const About = () => {
         </div>
         <div className="about-right">
           <span className="sub-text">
-            AcuPower Group is a leading provider of comprehensive business
+            PowerXcel IT Solutions is part of the AcuPower Group and is a leading provider of comprehensive business
             solutions, serving clients across a wide range of industries. With
             expertise spanning software development, training, CRM, business
             analysis, and consulting, we are dedicated to empowering
