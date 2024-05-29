@@ -5,15 +5,17 @@
     box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
     border-radius: 0.5rem;
     width: 16rem;
-    height: 16rem;
+    min-height: 18rem;
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
-    cursor: default;
+    cursor: pointer;
     /* transition: 1s ease-in; */
 }
 
-
+/* .card .justify{
+    word-spacing: 2px;
+} */
 .card img{
     width: 90%;
     height: 12rem;
@@ -26,9 +28,14 @@
     text-align: center;
 }
 
+.card .card-title:hover{
+    text-decoration: underline;
+    color: #3A6DCC;
+}
+
+
 @media screen and (max-width:780px) {
     .card{
-        height: 20rem;
         width: 20rem;
     }
 }

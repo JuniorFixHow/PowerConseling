@@ -22,52 +22,33 @@
 
 .services .cards{
     /* width: 100%; */
-    display: flex;
+    display: grid;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     gap: 2rem;
-}
-.services .cards2{
-    /* width: 100%; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-}
-.services .card-container2{
-    display: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+
 @media screen and (max-width:1100px) {
-   .services .card-container{
-    display: none;
-   }
-   .services .card-container2{
-    display: flex;
-   }
-   .services .card-container2 .cards{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-   }
+   .services .cards{
+       grid-template-columns: 1fr 1fr 1fr;
+    }
+    
 }
 
 @media screen and (max-width:780px) {
     .services .cards{
-        flex-direction: column;
+        grid-template-columns: 1fr;  
     }
-    .services .card-container{
-        display: flex;
-    }
-    .services .cards2{
-        display: none;
-    }
-    .services .card-container2{
-        display: none;
-    }
+
 
     .services .service-text{
         text-align: center;
+    }
+
+    .card-wrap:nth-child(n+5){
+        display: none;
     }
 }

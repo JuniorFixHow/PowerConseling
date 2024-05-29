@@ -1,14 +1,25 @@
 import Card from '../../components/card/Card';
 import './services.css';
-import LINK from '../../assets/imgs/w-type-of-chart.png';
-import LINK2 from '../../assets/imgs/w-how-does-forex-trading-work.png';
-import LINK5 from '../../assets/imgs/w-forex-trading.png';
-import LINK3 from '../../assets/imgs/w-forex-trading-platform.png';
-import LINK4 from '../../assets/imgs/w-forex-market.png';
-import LINK6 from '../../assets/imgs/PNG-Service-Acquisition-v2.png';
-import LINK7 from '../../assets/imgs/medical-writing-transparent-background-from-vector.png';
+// import LINK from '../../assets/imgs/w-type-of-chart.png';
+// import LINK2 from '../../assets/imgs/w-how-does-forex-trading-work.png';
+// import LINK5 from '../../assets/imgs/w-forex-trading.png';
+// import LINK3 from '../../assets/imgs/w-forex-trading-platform.png';
+// import LINK4 from '../../assets/imgs/w-forex-market.png';
+// import LINK6 from '../../assets/imgs/PNG-Service-Acquisition-v2.png';
+// import LINK7 from '../../assets/imgs/medical-writing-transparent-background-from-vector.png';
+import { CardContent } from '../../constant/Data';
+import { useState } from 'react';
 
 const Services = () => {
+  const [currentId, setCurrentId] = useState(null);
+  const openWidget = (id) =>{
+    if(currentId === null){
+      setCurrentId(id)
+    }
+    else{
+      setCurrentId(null)
+    }
+  }
   return (
     <div id='services' className="services">
       <span className='subtitle service-text' >We take your business to the next level</span>
@@ -17,28 +28,15 @@ const Services = () => {
       </span>
       <div className="card-container">  
         <div className="cards">
-            <Card title='Implementation Services' link={LINK} />
-            <Card title='Re-Implementation Services' link={LINK2} />
-            <Card title='Support Services' link={LINK3} />
-            <Card title='Consultant Training' link={LINK4} />
+          {
+            CardContent.map(item=>(
+              <div className='card-wrap' key={item.id}>      
+                <Card openWidget={()=>openWidget(item.id)} text={currentId === item.id ? item.text : ''} title={item.title} link={item.img} />
+              </div>
+            ))
+          }
         </div>
-        <div className="cards2">
-            <Card title='Pre-Sales Services' link={LINK5} />
-            <Card title='VAR Business Processs Services' link={LINK6} />
-            <Card title='Business Process Optimization Package' link={LINK7} />
-        </div>
-      </div>
-      <div className="card-container2">  
-        <div className="cards">
-            <Card title='Implementation Services' link={LINK} />
-            <Card title='Re-Implementation Services' link={LINK2} />
-            <Card title='Support Services' link={LINK3} />
-            <Card title='Consultant Training' link={LINK4} />
-     
-            <Card title='Pre-Sales Services' link={LINK5} />
-            <Card title='VAR Business Processs Services' link={LINK6} />
-            <Card title='Business Process Optimization Package' link={LINK7} />
-        </div>
+        
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ const Difference = () => {
                 <div className="diff-right">
                     <span className="second-title">We Care For Your Success</span>
                     <span className="sub-text sub-t">
-                        When partnering with AcuPower for your Implementation and Support needs, one thing you can be assured of is we truly care for your success.
+                        When partnering with PowerXcel IT Solutions for your Implementation and Support needs, one thing you can be assured of is we truly care for your success.
                         <br /> <br />
                         We take each endeavor on with an approach that has been seen and appreciated by all our clients to date.
                     </span>
@@ -37,7 +37,7 @@ const Difference = () => {
                 <div className="diff-right">
                     <span className="second-title">We Are Built On Efficiency</span>
                     <span className="sub-text sub-t">
-                        Here at AcuPower, when we begin each project, we take into consideration what services are needed and the timelines in which deliverables are requested.
+                        Here at PowerXcel IT Solutions, when we begin each project, we take into consideration what services are needed and the timelines in which deliverables are requested.
                         <br /> <br />
                         It is also quite important to us that we match you and your customer with the right Consultant(s) to ensure a seamless result.
                     </span>
