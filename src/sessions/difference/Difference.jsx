@@ -12,7 +12,7 @@ const Difference = () => {
                 <img src={IMG1} alt="DataScience1" />
                 <div className="diff-right">
                     <span className="second-title">We Are A Certified Partner</span>
-                    <span className="sub-text">
+                    <span className="sub-text sub-t">
                         As a certified partner, AcuPower Group employs consultants fully certified within Acumatica with years of experience.
                         <br /> <br />
                         With our consultants holding every consultant badge along with many technical badges, our knowledge of Acumatica is unmatched!
@@ -24,7 +24,7 @@ const Difference = () => {
                 <img src={IMG2} alt="DataScience1" />
                 <div className="diff-right">
                     <span className="second-title">We Care For Your Success</span>
-                    <span className="sub-text">
+                    <span className="sub-text sub-t">
                         When partnering with AcuPower for your Implementation and Support needs, one thing you can be assured of is we truly care for your success.
                         <br /> <br />
                         We take each endeavor on with an approach that has been seen and appreciated by all our clients to date.
@@ -36,7 +36,7 @@ const Difference = () => {
                 <img src={IMG3} alt="DataScience1" />
                 <div className="diff-right">
                     <span className="second-title">We Are Built On Efficiency</span>
-                    <span className="sub-text">
+                    <span className="sub-text sub-t">
                         Here at AcuPower, when we begin each project, we take into consideration what services are needed and the timelines in which deliverables are requested.
                         <br /> <br />
                         It is also quite important to us that we match you and your customer with the right Consultant(s) to ensure a seamless result.

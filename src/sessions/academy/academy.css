@@ -169,8 +169,8 @@
     }
 
     .academy img{
-        width: 22rem;
-        height: 20rem;
+        width: 20rem;
+        height: 18rem;
         object-fit: contain;
     }
 
@@ -179,6 +179,6 @@
     }
 
     .aca-input{
-        width: 20rem;
+        width: 16rem;
     }
 }

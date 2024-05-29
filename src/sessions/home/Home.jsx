@@ -16,7 +16,7 @@ const Home = () => {
                 <img src={IMG} alt="startup-3267505_1920.jpg" />
             </div>
             <div className="home-right">
-            <span className='welcome-text' >
+            <span className='welcome-text home-text' >
                 AcuPower Group is a certified partner in the Acumatica ERP ecosystem. Our company is built foremost on integrity and excellence ensuring the service you receive not only meet but exceed your expectations.
                 <br />
                 <br />
