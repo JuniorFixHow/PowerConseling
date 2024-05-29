@@ -31,7 +31,7 @@
     flex-direction: row;
     gap: 2rem;
     justify-content: space-around;
-    align-items: start;
+    align-items: center;
     width: 100%;
 }
 
@@ -93,4 +93,37 @@
 
 .next-icon{
     color: green;
+}
+
+@media screen and (max-width:1100px) {
+    .next-down{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:780px){
+    .next-text{
+        width: 90%;
+    }
+
+    .next-down img{
+        width: 20rem;
+        height: 20rem;
+        align-self: center;
+    }
+
+    .next-down{
+        flex-direction: column;
+    }
+
+    .next-container .one-row{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .one-row .half-row{
+        width: 90%;
+    }
 }

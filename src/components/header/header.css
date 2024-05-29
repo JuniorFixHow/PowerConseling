@@ -56,3 +56,45 @@ header{
 .book-call:hover{
     background-color: #C2362F;
 }
+
+.menu-icon{
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
+@media screen and (max-width:780px){
+    .header-container{
+        position: relative;
+    }
+    .header .hcenter{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        right: 0.5rem;
+        top: 5rem;
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+    }
+    .header .menu{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        right: 0.5rem;
+        top: 5rem;
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+    }
+
+    .logo-img{
+        height: 3rem;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+}

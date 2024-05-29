@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 5rem 0;
+    padding: 2rem 0;
     justify-content: center;
     align-items: center;
     width: 90%;
@@ -137,4 +137,48 @@
 
 .academy a{
     text-decoration: none;
+}
+
+@media screen and (max-width:1100px) {
+    .academy img{
+        object-fit: contain;
+    }
+    .aca-text{
+        width: 80%;
+    }
+    .aca-main{
+        gap: 2rem;
+    }
+    .aca-container{
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width:780px) {
+    .aca-text{
+        width: 85%;
+        text-align: justify;
+    }
+
+    .aca-container{
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .academy img{
+        width: 22rem;
+        height: 20rem;
+        object-fit: contain;
+    }
+
+    .aca-right{
+        width: 90%;
+    }
+
+    .aca-input{
+        width: 20rem;
+    }
 }

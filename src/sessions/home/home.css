@@ -76,3 +76,31 @@ powerconsulting24@gmail.com
     width: 25rem;
     /* flex: 1; */
 }
+
+.home-img{
+    display: none;
+    width: 10rem;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width:780px) {
+    .home{
+        padding: 6rem 0 1rem 0;
+    }
+
+    .home-left button{
+        font-size: 1.2rem;
+        padding: 0.8rem 0;
+        width: 10rem;
+    }
+
+    
+}
+@media screen and (max-width:700px) {
+    .home-center{
+        display: none;
+    }
+    .home-img{
+        display: block;
+    }
+}

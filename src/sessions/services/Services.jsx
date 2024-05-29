@@ -11,7 +11,7 @@ import LINK7 from '../../assets/imgs/medical-writing-transparent-background-from
 const Services = () => {
   return (
     <div id='services' className="services">
-      <span className='subtitle' >We take your business to the next level</span>
+      <span className='subtitle service-text' >We take your business to the next level</span>
       <span className='text-content' >
         Our Acumatica services range from supporting your customer needs to assisting you as a VAR with your business processes.  Regardless if you need something a la carte or more intensive, we have a solution for you.
       </span>
@@ -22,7 +22,19 @@ const Services = () => {
             <Card title='Support Services' link={LINK3} />
             <Card title='Consultant Training' link={LINK4} />
         </div>
+        <div className="cards2">
+            <Card title='Pre-Sales Services' link={LINK5} />
+            <Card title='VAR Business Processs Services' link={LINK6} />
+            <Card title='Business Process Optimization Package' link={LINK7} />
+        </div>
+      </div>
+      <div className="card-container2">  
         <div className="cards">
+            <Card title='Implementation Services' link={LINK} />
+            <Card title='Re-Implementation Services' link={LINK2} />
+            <Card title='Support Services' link={LINK3} />
+            <Card title='Consultant Training' link={LINK4} />
+     
             <Card title='Pre-Sales Services' link={LINK5} />
             <Card title='VAR Business Processs Services' link={LINK6} />
             <Card title='Business Process Optimization Package' link={LINK7} />

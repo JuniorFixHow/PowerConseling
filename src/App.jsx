@@ -1,4 +1,5 @@
 
+import { useState } from 'react'
 import './App.css'
 import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
@@ -11,13 +12,12 @@ import NextStep from './sessions/nextStep/NextStep'
 import Services from './sessions/services/Services'
 
 function App() {
-
+  const [showMenu, setShowMenu] = useState('hcenter');
   return (
-    <div className='app-main'>
-      {/* set an onpress function as a prop for the header */}
-      <Header />
+    <>
+    <Header showMenu={showMenu} setShowMenu={setShowMenu} />
+    <div onClick={()=>setShowMenu('hcenter')} className='app-main'>
       <Home />
-      {/* set IDs as props for these components */}
       <Services />
       <NextStep />
       <Difference />
@@ -26,6 +26,7 @@ function App() {
       <Contact />
       <Footer />
     </div>
+    </>
   )
 }
 

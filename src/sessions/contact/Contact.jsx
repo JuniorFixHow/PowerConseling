@@ -50,7 +50,7 @@ const Contact = () => {
   }
   return (
     <div id="contact" className="contact">
-      <span className="subtitle">We look Forward To Working With you</span>
+      <span className="subtitle center">We look Forward To Working With you</span>
       <div className="cont-container">
         <img src={IMG} alt="" />
         <div className="cont-right">

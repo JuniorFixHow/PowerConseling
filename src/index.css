@@ -85,3 +85,18 @@ body {
     color-scheme: dark;
   }
 }
+
+@media screen and (max-width:780px) {
+  .title, .subtitle{
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .second-title{
+    font-size: 1.2rem;
+  }
+  .subtitle, .text-content, .sub-text{
+    width: 80%;
+    text-align: justify;
+  }
+}

@@ -1,9 +1,11 @@
 import './header.css';
 import LOGO from '../../assets/imgs/logo.png';
 import { useState } from 'react';
+import { IoMdMenu } from "react-icons/io";
 
-const Header = () => {
+const Header = ({showMenu, setShowMenu}) => {
   const [currentTitle, setCurrentTitle] = useState('');
+  
   const openBooking = ()=>{
     window.open('https://calendly.com/powerconsulting24/30min', '_blank')
   }
@@ -34,6 +36,14 @@ const Header = () => {
       text:'Contact'
     },
   ]
+  
+  const toggleMenu = ()=>{
+    if(showMenu === 'hcenter'){
+      setShowMenu('menu')
+    }else{
+      setShowMenu('hcenter')
+    }
+  }
 
   return (
     <header className='header' >
@@ -41,7 +51,8 @@ const Header = () => {
         <a href='#home' className="logo">
           <img src={LOGO} alt='logo' className='logo-img' />
         </a>
-        <div className="hcenter">
+        <IoMdMenu onClick={toggleMenu} className='menu-icon' size={25} />
+        <div className={`hcenter ${showMenu}`}>
           {
             headerLinks.map(item=>(
               <a onClick={()=>setCurrentTitle(item.link)} key={item.link} href={item.link} className={currentTitle===item.link?"header-click":"header-item"}>{item.text}</a>

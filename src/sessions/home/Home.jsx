@@ -9,6 +9,7 @@ const Home = () => {
                 <h1 className='title' >We are a global digital services and solutions provider.</h1>
                 <a href="#services">
                     <button>Learn More</button>
+                    <img className='home-img' src={IMG} alt="startup-3267505_1920.jpg" />
                 </a>
             </div>
             <div className="home-center">

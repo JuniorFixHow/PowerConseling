@@ -25,3 +25,11 @@
     color: #1C3666;
     text-align: center;
 }
+
+@media screen and (max-width:780px) {
+    .card{
+        height: 20rem;
+        width: 20rem;
+    }
+}
+

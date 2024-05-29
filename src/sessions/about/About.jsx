@@ -4,8 +4,8 @@ import ABOUT  from '../../assets/imgs/data-science.svg';
 const About = () => {
   return (
     <div id="aboutus" className="about">
-      <span className="subtitle">About Us</span>
-      <span className="text-content">
+      <span className="subtitle center">About Us</span>
+      <span className="text-content about-t">
         We are a team of passionate innovators dedicated to creating
         transformative technology solutions. With a wealth of experience and a
         commitment to excellence, we strive to push the boundaries of what&#38;s
@@ -18,7 +18,7 @@ const About = () => {
           <img src={ABOUT} alt="" />
         </div>
         <div className="about-right">
-          <span className="sub-text">
+          <span className="sub-text about-te">
             PowerXcel IT Solutions is part of the AcuPower Group and is a leading provider of comprehensive business
             solutions, serving clients across a wide range of industries. With
             expertise spanning software development, training, CRM, business

@@ -121,3 +121,41 @@
 .contact a{
     text-decoration: none;
 }
+
+@media screen and (max-width:1100px) {
+    .cont-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .contact img{
+        object-fit: contain;
+    }
+}
+
+@media screen and (max-width:780px) {
+    .cont-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact img{
+        width: 22rem;
+        height: 20rem;
+        object-fit: contain;
+    }
+
+    .cont-right{
+        margin-top: 1.5rem;
+    }
+
+    .cont-input{
+        width: 20rem;
+    }
+
+    .contact{
+        margin-bottom: 2rem;
+    }
+}
