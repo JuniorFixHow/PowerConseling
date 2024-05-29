@@ -4,7 +4,7 @@ import AcaTable from '../../components/academyTables/AcaTable'
 import './academy.css'
 import NewMessage from '../../components/newMessage/NewMessage';
 
-const Academy = ({openMessage, setOpenMessage, currentItem, setCurrentItem}) => {
+const Academy = ({openMessage, setShowSide, setOpenMessage, currentItem, setCurrentItem}) => {
   const [search, setSearch] = useState('');
   
   
@@ -21,7 +21,7 @@ const Academy = ({openMessage, setOpenMessage, currentItem, setCurrentItem}) => 
   }
 
   return (
-    <div className="academy">
+    <div onClick={()=>setShowSide('hide')} className="academy">
       <div className="aca-container">
         <span className="subtitle aca-title">The AcuPower Academy</span>
         {openMessage && (

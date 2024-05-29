@@ -7,7 +7,7 @@ import axios from 'axios';
 import { API } from '../../components/constants';
 import { Alert, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 
-const Messages = ({setCurrentItem, setOpenMessage, currentItem, openMessage}) => {
+const Messages = ({setCurrentItem, setShowSide, setOpenMessage, currentItem, openMessage}) => {
   const [open, setOpen] = useState(false);
   const [openDialog, setOpenDialog] = useState(false);
   const [messages, setMessages] = useState([]);
@@ -71,7 +71,7 @@ const Messages = ({setCurrentItem, setOpenMessage, currentItem, openMessage}) =>
   }
 
   return (
-    <div className="messages">
+    <div onClick={()=>setShowSide('hide')} className="messages">
       <div className="msg-top">
         {openMessage && (
           <NewMessage

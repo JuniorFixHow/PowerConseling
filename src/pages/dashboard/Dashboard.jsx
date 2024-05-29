@@ -37,6 +37,7 @@ const Dashboard = () => {
               setCurrentItem={setCurrentItem}
               openMessage={openMessage}
               setOpenMessage={setOpenMessage}
+              setShowSide={setShowSide}
               />
               ) : (
               <Messages 
@@ -44,6 +45,7 @@ const Dashboard = () => {
                 setCurrentItem={setCurrentItem}
                 openMessage={openMessage}
                 setOpenMessage={setOpenMessage}
+                setShowSide={setShowSide}
             />
           )}
         </div>
