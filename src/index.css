@@ -95,8 +95,12 @@ body {
   .second-title{
     font-size: 1.2rem;
   }
-  .subtitle, .text-content, .sub-text{
+  .text-content, .sub-text{
     width: 80%;
     text-align: justify;
+  }
+  .subtitle{
+    text-align: center;
+    width: 80%;
   }
 }
