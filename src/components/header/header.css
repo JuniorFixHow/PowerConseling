@@ -28,3 +28,15 @@ header img{
     color: #1C3666;
     font-weight: 500;
 }
+
+@media screen and (max-width:780px) {
+    header img{
+        width: 4rem;
+    }
+
+    .header-text{
+        font-size: 1rem;
+        color: #1C3666;
+        font-weight: 500;
+    }
+}

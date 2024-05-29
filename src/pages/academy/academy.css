@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    /* background-color: aqua; */
 }
 
 .table-container{
@@ -21,6 +22,8 @@
     flex-direction: column;
     gap: 0.5rem;
     padding: 1rem;
+    /* width: 100%; */
+    /* background-color: red; */
 }
 
 .table-container input{
@@ -31,3 +34,24 @@
     border-radius: 0.3rem;
     border: 1px solid darkslategray;
 }
+.aca-title{
+    text-align: center;
+}
+
+@media screen and (max-width:1100px) {
+    .table-container{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        /* width: 25rem; */
+        width: 90%;
+    }
+    .aca-title{
+        font-size: 1.2rem !important;
+    }
+}
+@media screen and (max-width:768px) {
+    .table-container{
+        width: 22rem;
+    }
+}
+

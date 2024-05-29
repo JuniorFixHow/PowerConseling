@@ -8,7 +8,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-const Sidebar = ({setCurrentTab, currentTab}) => {
+const Sidebar = ({setCurrentTab, currentTab, showSide, setShowSide}) => {
   const {dispatch} = useContext(AuthContext);
   const openSite = ()=>{
     window.open('https://powerconsulting.netlify.app/', '_blank')
@@ -21,14 +21,23 @@ const Sidebar = ({setCurrentTab, currentTab}) => {
     navigate('/login');
   }
 
+  const showAcademy = ()=>{
+    setCurrentTab('aca');
+    setShowSide('hide');
+  }
+  const showMessage = ()=>{
+    setCurrentTab('mes');
+    setShowSide('hide');
+  }
+
   return (
-    <div className='sidebar' >
+    <div className={`sidebar ${showSide}`} >
         <div className="side-top">
-          <div onClick={()=>setCurrentTab('aca')} className={currentTab==='aca'?"side-one2":"side-one"}>
+          <div onClick={showAcademy} className={currentTab==='aca'?"side-one2":"side-one"}>
             <HiMiniUserGroup className={currentTab==='aca'?"side-icon2":"side-icon"} />
             <span className={currentTab==='aca'?"side-text2":"side-text"}>Academy</span>
           </div>
-          <div onClick={()=>setCurrentTab('mes')} className={currentTab==='mes'?"side-one2":"side-one"}>
+          <div onClick={showMessage} className={currentTab==='mes'?"side-one2":"side-one"}>
             <MdEmail className={currentTab==='mes'?"side-icon2":"side-icon"} />
             <span className={currentTab==='mes'?"side-text2":"side-text"}>Messages</span>
           </div>

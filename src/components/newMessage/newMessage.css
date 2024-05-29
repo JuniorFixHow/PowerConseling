@@ -90,3 +90,9 @@
 .mesright:hover{
     background-color: black;
 }
+
+@media screen and (max-width:780px) {
+    .mess-container{
+        width: 20rem;
+    }
+}

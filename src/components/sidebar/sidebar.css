@@ -5,6 +5,9 @@
     min-height: 100vh;
     flex-direction: column;
     gap: 5rem;
+    /* height: 100%; */
+    left: 0;
+    z-index: 99;
 }
 
 
@@ -61,4 +64,13 @@
 .side-text{
     /* font-size: 1.3rem; */
     color: aliceblue;
+}
+
+@media screen and (max-width:1100px) {
+    .sidebar{
+        position: absolute;
+    }
+    .hide{
+        display: none;
+    }
 }
