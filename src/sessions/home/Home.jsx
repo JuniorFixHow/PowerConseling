@@ -29,7 +29,9 @@ const Home = () => {
             PowerXcel Solutions
             offers a comprehensive and structured approach to ERP training,
             ensuring participants gain in-depth knowledge and practical
-            experience. Here are the key benefits and features of PowerXcel
+            experience. 
+            <span className="hidden" >
+            Here are the key benefits and features of PowerXcel
             Solutions' ERP training programs:
             <br />
             🗸 Diverse ERP System Training
@@ -41,7 +43,6 @@ const Home = () => {
             🗸 Hands-On Learning Real-World
             Projects
             <br />
-            <span className="hidden" >
             🗸 Expert Instructors
             Industry Veterans
             <br />
