@@ -6,7 +6,7 @@ import IMG3 from '../../assets/imgs/consult_dianostic2.png';
 const Difference = () => {
   return (
     <div id='support' className='difference' >
-        <span className="subtitle">The AcuPower Difference</span>
+        <span className="subtitle">PowerXcel IT Solutions Difference</span>
         <div className="diff-container">
             <div className="diff-row">
                 <img src={IMG1} alt="DataScience1" />

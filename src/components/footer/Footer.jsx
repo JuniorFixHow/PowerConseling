@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer >
       <div className="footer-container">
-        <span className='sub-text' >&copy; 2024 AcuPower. All Rights Reserved.</span>
+        <span className='sub-text' >&copy; 2024 PowerXcel IT Solutions. All Rights Reserved.</span>
         <div className="socials">
           <FaTwitter className='social' />
           <FaFacebookSquare className='social' />
