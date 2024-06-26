@@ -54,6 +54,8 @@ body {
   font-weight: bold;
   color: #1C3666;
 }
+
+
 .second-title{
   font-size: 1.4rem;
   font-weight: bold;
@@ -80,6 +82,11 @@ body {
   cursor: default;
 }
 
+@media (prefers-color-scheme: dark) {
+  .subtitle, .title, .second-title, .mini-title{
+    color: #4177db;
+  }
+}
 
 @media (prefers-color-scheme: dark) {
   html {

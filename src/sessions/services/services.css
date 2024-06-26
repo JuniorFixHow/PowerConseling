@@ -9,6 +9,7 @@
     /* background-repeat: no-repeat; */
     align-items: center;
     justify-content: center;
+    scroll-margin-top: 5rem;
 }
 
 .services .card-container{

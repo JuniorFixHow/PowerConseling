@@ -33,6 +33,12 @@
     color: #3A6DCC;
 }
 
+@media (prefers-color-scheme: dark) {
+    .card .card-title{
+      color: #4177db;
+    }
+  }  
+
 
 @media screen and (max-width:780px) {
     .card{

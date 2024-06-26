@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './header.css';
 import LOGO from '../../assets/imgs/logo.png';
 import { useState } from 'react';
@@ -45,6 +46,11 @@ const Header = ({showMenu, setShowMenu}) => {
     }
   }
 
+  const pressHeaderTitle = (link)=>{
+    setCurrentTitle(link);
+    setShowMenu('hcenter');
+  }
+
   return (
     <header className='header' >
       <div className="header-container">
@@ -55,7 +61,7 @@ const Header = ({showMenu, setShowMenu}) => {
         <div className={`hcenter ${showMenu}`}>
           {
             headerLinks.map(item=>(
-              <a onClick={()=>setCurrentTitle(item.link)} key={item.link} href={item.link} className={currentTitle===item.link?"header-click":"header-item"}>{item.text}</a>
+              <a onClick={()=>pressHeaderTitle(item.link)} key={item.link} href={item.link} className={currentTitle===item.link?"header-click":"header-item"}>{item.text}</a>
             ))
           }
           <button className='book-call' onClick={openBooking} >Book a call</button>

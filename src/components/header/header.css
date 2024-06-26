@@ -63,6 +63,12 @@ header{
     display: none;
 }
 
+@media (prefers-color-scheme: dark) {
+    .menu-icon{
+        color: black;
+    }
+} 
+
 @media screen and (max-width:780px){
     .header-container{
         position: relative;
