@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 const Sidebar = ({setCurrentTab, currentTab, showSide, setShowSide}) => {
   const {dispatch} = useContext(AuthContext);
   const openSite = ()=>{
-    window.open('https://powerconsulting.netlify.app/', '_blank')
+    window.open('https://www.powerxcelitsolutions.com/', '_blank')
   }
 
   const navigate = useNavigate();
