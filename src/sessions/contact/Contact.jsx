@@ -113,16 +113,26 @@ const Contact = () => {
               {isLoading ? "Processing..." : "Send"}
             </button>
           </form>
+          
+          <div className="bcd">
+            <div className="cont-down">
+              <a href="tel:770 854 1894" className="phone-container">
+                <FaPhone className="cont-icon" />
+                <span className="welcome-text">770 854 1894</span>
+              </a>
+              <button onClick={openBooking} className="book-button">
+                Book a call
+              </button>
+            </div>
 
-          <div className="cont-down">
-            <a href="tel:770 854 1894" className="phone-container">
-              <FaPhone className="cont-icon" />
-              <span className="welcome-text">770 854 1894</span>
-            </a>
-            <button onClick={openBooking} className="book-button">
-              Book a call
-            </button>
+            <div className="cont-useful">
+              <span className="welcome-text">Tel: +1 (203) 715 5243</span>
+              <span className="welcome-text">Email: contact@ramahsolutions.com</span>
+              <span className="welcome-text">Location: 406 Nocturne Ridge Drive Willis TX, 77318, USA</span>
+            </div>
+
           </div>
+
         </div>
       </div>
     </div>

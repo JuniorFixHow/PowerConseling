@@ -123,6 +123,18 @@
     text-decoration: none;
 }
 
+.bcd{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cont-useful{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 @media screen and (max-width:1100px) {
     .cont-container{
         flex-direction: column;
